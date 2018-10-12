@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float accelerationForce, maxSpeed, jumpHeight, groundCheckRadius;
 
-    private float moveInput;
+    private float moveInput, respawnDelay;
     private bool jumpInput;
 
     //refresh the Jump button press state
@@ -50,17 +50,14 @@ public class PlayerController : MonoBehaviour
         UpdatePhysicsMaterial();
         Move();
         grounded = Physics2D.OverlapCircle(groundCheck.position,
-            groundCheckRadius, whatIsGround);
-
-        if (myRigidBody.velocity.y > 0)
-            anim.SetBool("isJumping", true);
-        else if (myRigidBody.velocity.y < 0)
-            anim.SetBool("isJumping", false);
+            groundCheckRadius, whatIsGround);       
 
         if (grounded)
         {
             doubleJumped = false;
         }
+
+        
     }
 
 
@@ -128,6 +125,8 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         myRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        
+            
 
         //Check for Second jump input to allow Double Jumping
         if (jumpInput && !doubleJumped && !grounded)
@@ -141,12 +140,13 @@ public class PlayerController : MonoBehaviour
     {
         //Changed from AddForce() due the double jump becoming unreliable and varying depending on when the player doubleJumps
         myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
+        
         doubleJumped = true;
     }
 
     //----------------SETS CURRENT CHECKPOINT-----------
     public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
-    {
+    {        
         if (currentCheckpoint = null)
             currentCheckpoint.SetAsActivated(false);
         else
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
             newCurrentCheckpoint.SetAsActivated(true);
         }
     }
-
+    
 
     public void Respawn()
     {
