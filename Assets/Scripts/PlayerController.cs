@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
         grounded = Physics2D.OverlapCircle(groundCheck.position,
             groundCheckRadius, whatIsGround);
 
+        if (myRigidBody.velocity.y > 0)
+            anim.SetBool("isJumping", true);
+        else if (myRigidBody.velocity.y < 0)
+            anim.SetBool("isJumping", false);
+
         if (grounded)
         {
             doubleJumped = false;
