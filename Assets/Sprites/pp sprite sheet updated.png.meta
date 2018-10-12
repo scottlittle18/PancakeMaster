@@ -1,19 +1,23 @@
 fileFormatVersion: 2
-guid: c6b9875f283edb64dbd302b9137067ea
+guid: 6213bb43e33d8844a8a1f9d1f9f6700d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PL_PrincePancake_0
-    21300002: PL_PrincePancake_1
-    21300004: PL_PrincePancake_2
-    21300006: PL_PrincePancake_3
-    21300008: PL_PrincePancake_4
-    21300010: PL_PrincePancake_5
-    21300012: PL_PrincePancake_6
-    21300014: PL_PrincePancake_7
-    21300016: PL_PrincePancake_8
-    21300018: PL_PrincePancake_9
-    21300020: PL_PrincePancake_10
-    21300022: PL_PrincePancake_11
+    21300000: Player_Idle0
+    21300002: Player_Idle1
+    21300004: Player_Idle2
+    21300006: Player_Idle3
+    21300008: Player_Run0
+    21300010: Player_Run1
+    21300012: Player_Run2
+    21300014: Player_Run3
+    21300016: Player_Jump0
+    21300018: Player_Jump1
+    21300020: Player_Jump2
+    21300022: Player_Jump3
+    21300024: Player_Dash0
+    21300026: Player_Dash1
+    21300028: Player_Dash2
+    21300030: Player_Dash3
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -94,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PL_PrincePancake_0
+      name: Player_Idle0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 806
-        width: 112
-        height: 189
+        x: 33
+        y: 807
+        width: 109
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,13 +112,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2530656be1ee39d489942d43bce14b91
+      spriteID: f71e95d4520b66344989199a7873214a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_1
+      name: Player_Idle1
       rect:
         serializedVersion: 2
         x: 232
@@ -128,13 +132,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed5c897643207041bb842c88b4f21c1
+      spriteID: b7807db14f6b57544b40d796ebd769a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_2
+      name: Player_Idle2
       rect:
         serializedVersion: 2
         x: 432
@@ -148,18 +152,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e443714f00eebe429a5bd7d293a3bc7
+      spriteID: 49d29ff3e1dc46a4891d7f6b673e9f6d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_3
+      name: Player_Idle3
       rect:
         serializedVersion: 2
         x: 632
         y: 806
-        width: 110
+        width: 111
         height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,19 +172,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a30ec884229bbb4cb0e2741f414fa64
+      spriteID: 44580d0399230fd438454130a4324a64
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_4
+      name: Player_Run0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 606
-        width: 110
-        height: 190
+        x: 32
+        y: 607
+        width: 111
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,19 +192,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92440ef358045b545abc6afd31c846e0
+      spriteID: d1b2732e8f9f2f64eb03d9a097d35952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_5
+      name: Player_Run1
       rect:
         serializedVersion: 2
         x: 232
         y: 616
-        width: 124
-        height: 183
+        width: 123
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,38 +212,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf53f07550d78fc45a549d31dba1343b
+      spriteID: 409d68f3de2759446b080d5d838748c5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_6
+      name: Player_Run2
       rect:
         serializedVersion: 2
-        x: 433
-        y: 606
-        width: 110
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4590e4944c80c64428b9796c61ba153e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PL_PrincePancake_7
-      rect:
-        serializedVersion: 2
-        x: 632
-        y: 611
-        width: 110
+        x: 432
+        y: 607
+        width: 111
         height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -248,13 +232,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a076afb63f371fc499326c49e0281a77
+      spriteID: 4608a4341f9b81648893ebe6f6132ab1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_8
+      name: Player_Run3
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 611
+        width: 112
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff5d2d4d554a6042826538c6bd78423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Jump0
       rect:
         serializedVersion: 2
         x: 33
@@ -268,18 +272,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b2bac921a331ab4a97543fb647ab99c
+      spriteID: 1c3e272efd1eecb4b818a5cd0db1e1e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_9
+      name: Player_Jump1
       rect:
         serializedVersion: 2
         x: 232
         y: 407
-        width: 110
+        width: 111
         height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -288,19 +292,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d969df7489180be4c9e795f20b6c1f77
+      spriteID: b06408af6a30ecf428aad496bbc3a488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_10
+      name: Player_Jump2
       rect:
         serializedVersion: 2
         x: 433
         y: 413
         width: 104
-        height: 182
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,13 +312,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34f07786c1ef51468eb029d0a4ccaf6
+      spriteID: 426d199ae25aa534d9f5d89e4ddd67b7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PL_PrincePancake_11
+      name: Player_Jump3
       rect:
         serializedVersion: 2
         x: 632
@@ -328,7 +332,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b077760c04e98384f89e5059e2fe56f3
+      spriteID: ee0a5db82fabb8043a2d040a7c3d25b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Dash0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 207
+        width: 111
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b750c2886566e44b830192f6543cd85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Dash1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 207
+        width: 111
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f95b5fc210a4c4fb9b8f9d65e71d28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Dash2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 209
+        width: 103
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06829c0b95b5e4447a3a091cfc76732d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Dash3
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 210
+        width: 107
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82404cb2956b62c4ba129faaacd53b51
       vertices: []
       indices: 
       edges: []
@@ -336,7 +420,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 564e638b79cb24e46a5c83000fc8c47b
+    spriteID: 12521f30cb883fc4e84ccf116b3dd21e
     vertices: []
     indices: 
     edges: []
