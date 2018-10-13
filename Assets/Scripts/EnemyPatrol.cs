@@ -8,7 +8,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField]
     private float moveSpeed, checkRadius;
 
-    public bool hittingWall, notEdge, moveRight, jumpRight;
+    private bool hittingWall, atEdge, moveRight, jumpRight;
 
     [SerializeField]
     private Transform wallCheck;
@@ -19,13 +19,13 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsWall;
 
-    [SerializeField]
+    //[SerializeField]
     private Rigidbody2D enemyRigidBody;
 
     // Use this for initialization
     void Start()
     {
-
+        enemyRigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -35,10 +35,10 @@ public class EnemyPatrol : MonoBehaviour
             checkRadius, whatIsWall);
 
         //Sets the notEdge vairable true or false based on the collision detected
-        notEdge = Physics2D.OverlapCircle(edgeCheck.position,
+        atEdge = Physics2D.OverlapCircle(edgeCheck.position,
             checkRadius, whatIsWall);
 
-        if (hittingWall || notEdge)
+        if (hittingWall || !atEdge)
             moveRight = !moveRight;
 
         if (moveRight)

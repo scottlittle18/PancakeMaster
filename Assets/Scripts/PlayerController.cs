@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float accelerationForce, maxSpeed, jumpHeight, groundCheckRadius;
 
-    private float moveInput, respawnDelay;
+    public float respawnDelay;
+    private float moveInput;
     private bool jumpInput;
 
     //refresh the Jump button press state
@@ -32,15 +33,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
-    [SerializeField]
+    
     private Rigidbody2D myRigidBody;
 
-    [SerializeField]
+    
     private Collider2D playerGroundCollider;
 
     // Use this for initialization
     void Start()
     {
+        myRigidBody = GetComponent<Rigidbody2D>();
+        playerGroundCollider = GetComponent<CapsuleCollider2D>();
 
     }
 
@@ -159,13 +162,28 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn()
     {
-        new WaitForSecondsRealtime(2);
+        StartCoroutine("RespawnDelay");
+        gameObject.SetActive(true);
+    }
+
+    public IEnumerator RespawnDelay()
+    {
+        
+
         if (currentCheckpoint == null)
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         else
         {
             myRigidBody.velocity = Vector2.zero;
             transform.position = currentCheckpoint.transform.position;
+            gameObject.SetActive(false);
+            yield return new WaitForSeconds(respawnDelay);
+            
+
         }
+        
+
     }
 }
