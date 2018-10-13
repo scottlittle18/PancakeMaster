@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour {
 
     private bool paused = false;
     public GameObject PauseUI;
-    public SceneLoader sceneLoader;
+    private SceneLoader sceneLoader;
 
 	// Use this for initialization
 	void Start ()
