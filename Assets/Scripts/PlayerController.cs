@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D myRigidBody;    
     private Collider2D playerGroundCollider;
 
+    //Bool to check if the player has respawned or not
+    public bool Dead = false;
+
     // Use this for initialization
     void Start()
     {
