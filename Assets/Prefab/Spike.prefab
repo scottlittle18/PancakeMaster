@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61459415067648092}
   - component: {fileID: 114090028035609764}
   - component: {fileID: 114876654949352136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4358221790174262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CheckPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037414070225394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.43, y: -4.53, z: -0.042188227}
+  m_LocalPosition: {x: 15.21, y: -20.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358221790174262}
