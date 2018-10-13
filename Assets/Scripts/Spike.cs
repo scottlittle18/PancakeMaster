@@ -21,6 +21,9 @@ public class Spike : MonoBehaviour
     [SerializeField]
     private BoxCollider2D warningSpike;
 
+    [SerializeField]
+    private AudioSource SpikeRise;
+
     private void Start()
     {
         originHeight = transform.position.y;
@@ -28,7 +31,9 @@ public class Spike : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        bool WasActive;
         //Sets the active variable
+        WasActive = active;
         active = Physics2D.OverlapCircle(playerCheck.position,
             checkRadius, whatIsPlayer);
         if (active)
@@ -60,6 +65,10 @@ public class Spike : MonoBehaviour
                 transform.Translate(Vector3.down * Time.deltaTime);
                 Reset();
             }
+        }
+        if(WasActive == false && active == true)
+        {
+            SpikeRise.Play();
         }
     }
     private void Reset()
