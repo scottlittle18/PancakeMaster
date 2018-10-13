@@ -40,8 +40,20 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D myRigidBody;    
     private Collider2D playerGroundCollider;
 
-    //Bool to check if the player has respawned or not
+    // Bool to check if the player has respawned or not
     public bool Dead = false;
+
+    // the number of lives that the player has remaining
+    [SerializeField]
+    public static int lives = 3;
+
+    // Getter for remaining lives
+    [SerializeField]
+    public int RemainingLives { get { return lives; } }
+
+    // the time it takes for the game to reset in seconds
+    [SerializeField]
+    private int RespawnTime = 2;
 
     // Use this for initialization
     void Start()
@@ -53,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Debug.Log(RemainingLives);
         UpdatePhysicsMaterial();
         Move();
         grounded = Physics2D.OverlapCircle(groundCheck.position,
@@ -183,13 +196,13 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn()
     {
-        StartCoroutine("RespawnDelay");
+        --lives;
+        StartCoroutine("RespawnDelay", RespawnTime);
         gameObject.SetActive(true);
     }
 
-    public IEnumerator RespawnDelay()
+    public IEnumerator RespawnDelay(float time)
     {
-        
 
         if (currentCheckpoint == null)
         {
@@ -204,7 +217,5 @@ public class PlayerController : MonoBehaviour
             
 
         }
-        
-
     }
 }
