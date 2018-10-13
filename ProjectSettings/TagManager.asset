@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ActivationPoints
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,11 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+<<<<<<< HEAD
+  - Background
+=======
+  - ActivationPoints
+>>>>>>> 7b893ea7401c8df10cddc816b46c7e2bad36c996
   - 
   - 
   - 
