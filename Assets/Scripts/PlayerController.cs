@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float accelerationForce, maxSpeed, jumpHeight, groundCheckRadius;
 
-    public float respawnDelay;
+    //Respawn Delay
+    [SerializeField]
+    private float respawnDelay;
+
     private float moveInput;
     private bool jumpInput;
 
@@ -33,18 +36,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
-    
-    private Rigidbody2D myRigidBody;
-
-    
+    //Get RigidBody2D && Collider2D components on Start()
+    private Rigidbody2D myRigidBody;    
     private Collider2D playerGroundCollider;
 
     // Use this for initialization
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        playerGroundCollider = GetComponent<CapsuleCollider2D>();
-
+        playerGroundCollider = GetComponent<CapsuleCollider2D>();        
     }
 
 
@@ -60,9 +60,7 @@ public class PlayerController : MonoBehaviour
         if (grounded)
         {
             doubleJumped = false;
-        }
-
-        
+        }        
     }
 
 
