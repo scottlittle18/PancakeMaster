@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private PhysicsMaterial2D playerMovingPM, playerStoppingPM;
 
     [SerializeField]
-    private Animator anim;
+    public Animator anim;
 
     //Get RigidBody2D && Collider2D components on Start()
     private Rigidbody2D myRigidBody;    
@@ -198,6 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         --lives;
         StartCoroutine("RespawnDelay", RespawnTime);
+        anim.SetBool("isDead", false);
         gameObject.SetActive(true);
     }
 

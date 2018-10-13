@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-
+    
 
     //Start() and Update() are not needed for this script 
     //  it is looking for a collision and doesnt need to update
@@ -13,6 +13,7 @@ public class KillPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {            
             PlayerController player = collision.GetComponent<PlayerController>();
+            player.anim.SetBool("isDead", true);
             player.Respawn();
             
         }
