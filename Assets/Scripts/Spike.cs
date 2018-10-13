@@ -68,16 +68,5 @@ public class Spike : MonoBehaviour
         endHeight = originHeight + readyHeight + attackHeight;
     }
 }
-    //private void OnTriggerEnter2D(Collider2D collision) //other.CompareTag("Some tag")
-    //{
-
-    //    Debug.Log("Collision detected!");
-
-    //    if (collision.CompareTag("Player"))
-    //    {
-    //        
-    //        active = true;
-    //    }
-    //}
 
 
