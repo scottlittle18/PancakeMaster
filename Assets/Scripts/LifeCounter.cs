@@ -4,32 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 public class LifeCounter : MonoBehaviour
 {
-
+    [SerializeField]
     Image Life1, Life2, Life3;
 
     PlayerController controller;
-
-    [SerializeField]
-    private int remainingLives = 3;
 
     private void Start()
     {
         controller = GetComponent<PlayerController>();
 
-        Life1.enabled = true;
-        Life2.enabled = true;
-        Life3.enabled = true;
+        CheckLives();
     }
 
     private void Update()
     {
         if (controller.Dead)
         {
-            switch (remainingLives)
+            CheckLives();
+
+            controller.Dead = false;
+        }
+    }
+
+    void CheckLives()
+    {
+        if (controller.RemainingLives >= 0)
+        {
+            switch (controller.RemainingLives)
             {
                 case (3):
                     {
-                        SetLives(true, true, true);
+                        SetLives(true);
                         break;
                     }
                 case (2):
@@ -44,13 +49,7 @@ public class LifeCounter : MonoBehaviour
                     }
                 case (0):
                     {
-                        SetLives(false, false, false);
-                        break;
-                    }
-                case (-1):
-                    {
-                        // Game over code here.
-
+                        SetLives(false);
                         break;
                     }
                 default:
@@ -60,8 +59,12 @@ public class LifeCounter : MonoBehaviour
                         break;
                     }
             }
+        }
+        else
+        {
+            SetLives(false);
 
-            controller.Dead = true;
+            // Game Over Code Here
         }
     }
 
@@ -70,5 +73,12 @@ public class LifeCounter : MonoBehaviour
         Life1.enabled = b_Life1;
         Life2.enabled = b_Life2;
         Life3.enabled = b_Life3;
+    }
+
+    void SetLives(bool b_Life)
+    {
+        Life1.enabled = b_Life;
+        Life2.enabled = b_Life;
+        Life3.enabled = b_Life;
     }
 }
