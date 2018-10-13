@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class TitleScreenLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     public void LoadTest()
     {
@@ -19,6 +19,11 @@ public class TitleScreenLoader : MonoBehaviour
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level 1");
+    }
+
+    public void LoadTitleScreen()
+    {
+        SceneManager.LoadScene("Title Screen");
     }
 	
 }

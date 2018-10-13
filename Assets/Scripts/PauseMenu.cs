@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SceneLoader))]
 public class PauseMenu : MonoBehaviour {
 
     private bool paused = false;
     public GameObject PauseUI;
+    public SceneLoader sceneLoader;
 
 	// Use this for initialization
 	void Start ()
     {
         PauseUI.SetActive(false);
+        sceneLoader = GetComponent<SceneLoader>();
 	}
 	
 	// Update is called once per frame
@@ -42,6 +45,6 @@ public class PauseMenu : MonoBehaviour {
 
     public void Quit()
     {
-        Application.Quit();
+        sceneLoader.LoadTitleScreen();
     }
 }
