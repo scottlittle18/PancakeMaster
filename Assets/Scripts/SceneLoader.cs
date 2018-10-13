@@ -10,10 +10,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Test Level");
     }
-
-    public void LoadCredits()
+    public void LoadTitleScreen()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Title Screen");
     }
 
     public void LoadLevel1()
@@ -21,9 +20,23 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Level 1");
     }
 
-    public void LoadTitleScreen()
+    public void LoadLevel2()
     {
-        SceneManager.LoadScene("Title Screen");
+        SceneManager.LoadScene("Level 2");
     }
-	
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level 3");
+    }
+
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene("Level 4");
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
