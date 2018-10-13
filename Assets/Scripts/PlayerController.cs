@@ -150,6 +150,24 @@ public class PlayerController : MonoBehaviour
         doubleJumped = true;
     }
 
+    /* ***********************************************
+     * For keeping the player on moving platforms
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "MovingPlatform")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "MovingPlatform")
+        {
+            transform.parent = null;
+        }
+    }************************************/
+
     //----------------SETS CURRENT CHECKPOINT-----------
     public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
     {        
