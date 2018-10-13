@@ -30,7 +30,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Sets the hittingWall variable 
+        //Setd the hittingWall variable 
         hittingWall = Physics2D.OverlapCircle(wallCheck.position,
             checkRadius, whatIsWall);
 
