@@ -159,6 +159,7 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn()
     {
+        new WaitForSecondsRealtime(2);
         if (currentCheckpoint == null)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         else

@@ -113,6 +113,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24605137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 24605140}
+  - component: {fileID: 24605139}
+  - component: {fileID: 24605138}
+  m_Layer: 0
+  m_Name: KillZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &24605138
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24605137}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &24605139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24605137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16918c2210368a24086bf6c092b2eb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &24605140
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24605137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.96, y: -6.43, z: 0.00390625}
+  m_LocalScale: {x: 162.51073, y: 1.5212308, z: 1.5212308}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160375137 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1020906372233410, guid: 41a254f4b5aed764a82e572f807a92ec,
@@ -130,7 +196,7 @@ GameObject:
   - component: {fileID: 480506725}
   - component: {fileID: 480506724}
   m_Layer: 0
-  m_Name: Square
+  m_Name: TEST_KillPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,6 +536,54 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 114786909930614308, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 907831b9c3c9ce24fac79bad4a75d9ec,
+        type: 3}
+    - target: {fileID: 114515469836281098, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 907831b9c3c9ce24fac79bad4a75d9ec,
+        type: 3}
+    - target: {fileID: 114080302756817082, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 907831b9c3c9ce24fac79bad4a75d9ec,
+        type: 3}
+    - target: {fileID: 224806507855801250, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.35600498
+      objectReference: {fileID: 0}
+    - target: {fileID: 224821601277423890, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.35625008
+      objectReference: {fileID: 0}
+    - target: {fileID: 224189797680550152, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.35600498
+      objectReference: {fileID: 0}
+    - target: {fileID: 224806507855801250, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 224821601277423890, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 224189797680550152, guid: 41a254f4b5aed764a82e572f807a92ec,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.6999817
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41a254f4b5aed764a82e572f807a92ec, type: 2}
   m_IsPrefabParent: 0
@@ -547,7 +661,7 @@ GameObject:
   - component: {fileID: 1922059675}
   - component: {fileID: 1922059674}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: TEST_Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
