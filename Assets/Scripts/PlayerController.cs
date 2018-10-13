@@ -53,7 +53,9 @@ public class PlayerController : MonoBehaviour
         UpdatePhysicsMaterial();
         Move();
         grounded = Physics2D.OverlapCircle(groundCheck.position,
-            groundCheckRadius, whatIsGround);       
+            groundCheckRadius, whatIsGround);
+
+        anim.SetFloat("jumpVelocity", myRigidBody.velocity.y);
 
         if (grounded)
         {
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         myRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-        
+        anim.SetFloat("jumpVelocity", myRigidBody.velocity.y);
             
 
         //Check for Second jump input to allow Double Jumping
