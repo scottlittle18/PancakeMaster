@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spike : MonoBehaviour {
+public class Spike : MonoBehaviour
+{
 
-    private bool  active, isAttacking;
+    private bool active, isAttacking;
     private float goalHeight, originHeight, endHeight;
 
     [SerializeField]
@@ -17,16 +18,20 @@ public class Spike : MonoBehaviour {
     [SerializeField]
     private LayerMask whatIsPlayer;
 
+    [SerializeField]
+    private BoxCollider2D warningSpike;
+
     private void Start()
     {
-
+        originHeight = transform.position.y;
+        Reset();
     }
     private void FixedUpdate()
     {
         //Sets the active variable
-        active = Physics2D.OverlapCircle(playerCheck.position, 
+        active = Physics2D.OverlapCircle(playerCheck.position,
             checkRadius, whatIsPlayer);
-        if(active)
+        if (active)
         {
             Debug.Log("Ready to move!");
             if (transform.position.y < endHeight) //checks to see if it's at the final height
@@ -38,6 +43,7 @@ public class Spike : MonoBehaviour {
                 else //once it reaches the ready height, sets a new goal height
                 {
                     goalHeight += attackHeight;
+                    this.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
             else //once it reaches end height, sets active to false, which lets it lower again
@@ -50,11 +56,18 @@ public class Spike : MonoBehaviour {
             if (transform.position.y > originHeight) //sees if it's higher than origin
             {
                 Debug.Log("Resetting...");
+                this.GetComponent<BoxCollider2D>().enabled = false;
                 transform.Translate(Vector3.down * Time.deltaTime);
+                Reset();
             }
         }
     }
+    private void Reset()
+    {
+        goalHeight = originHeight + readyHeight;
+        endHeight = originHeight + readyHeight + attackHeight;
     }
+}
     //private void OnTriggerEnter2D(Collider2D collision) //other.CompareTag("Some tag")
     //{
 
@@ -62,9 +75,7 @@ public class Spike : MonoBehaviour {
 
     //    if (collision.CompareTag("Player"))
     //    {
-    //        originHeight = transform.position.y;
-    //        goalHeight = originHeight + readyHeight;
-    //        endHeight = originHeight + readyHeight + attackHeight;
+    //        
     //        active = true;
     //    }
     //}
