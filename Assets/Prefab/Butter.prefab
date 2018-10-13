@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4803439035623528}
   - component: {fileID: 212078567150546622}
   - component: {fileID: 61028473076557720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Butter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
