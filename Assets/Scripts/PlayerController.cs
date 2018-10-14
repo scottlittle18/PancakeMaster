@@ -55,9 +55,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int RespawnTime = 2;
 
-    [SerializeField]
-    private AudioSource PlayerJump;
-
     // Use this for initialization
     void Start()
     {
@@ -146,7 +143,6 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-
         myRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         anim.SetFloat("jumpVelocity", myRigidBody.velocity.y);
             
@@ -162,9 +158,8 @@ public class PlayerController : MonoBehaviour
     private void DoubleJump()
     {
         //Changed from AddForce() due the double jump becoming unreliable and varying depending on when the player doubleJumps
-        PlayerJump.Play();
         myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
-
+        
         doubleJumped = true;
     }
 

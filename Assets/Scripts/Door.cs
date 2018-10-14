@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public string Level = "";
+    
     BoxCollider2D box;
+
+    string currentScene;
+
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().name;
+    }
 
     private void Awake()
     {
@@ -21,14 +28,14 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Up command registered.");
 
-            if (Level == "")
+            if (currentScene != null)
             {
-                Debug.Log("Next level not specified.");
+                SceneManager.LoadScene(currentScene + 1);
             }
             else
             {
-                Debug.Log("Next level loading.");
-                SceneManager.LoadScene(Level);
+                SceneManager.LoadScene(currentScene);
+                
             }
         }
     }
