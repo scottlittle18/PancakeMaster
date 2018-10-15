@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    string currentScene;
 
-        public void TestLevel()
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().name;
+    }
+
+    public void TestLevel()
         {
             SceneManager.LoadScene("Test Level");
         }
@@ -35,6 +41,11 @@ public class SceneLoader : MonoBehaviour
         public void Level4()
         {
             SceneManager.LoadScene("Level 4");
+        }
+
+        public void Retry()
+        {
+            SceneManager.LoadScene(currentScene);
         }
 
         public void Credits()

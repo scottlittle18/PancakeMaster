@@ -8,11 +8,11 @@ public class Door : MonoBehaviour
     
     BoxCollider2D box;
 
-    string currentScene;
+    int currentScene;
 
     private void Start()
     {
-        currentScene = SceneManager.GetActiveScene().name;
+        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Awake()
@@ -28,15 +28,7 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Up command registered.");
 
-            if (currentScene != null)
-            {
-                SceneManager.LoadScene(currentScene + 1);
-            }
-            else
-            {
-                SceneManager.LoadScene(currentScene);
-                
-            }
+            SceneManager.LoadScene(currentScene + 1);
         }
     }
 }
