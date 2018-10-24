@@ -9,7 +9,7 @@ public class LifeCounter : MonoBehaviour
 
     PlayerController controller;
 
-    private void Start()
+    void Start()
     {
         controller = GetComponent<PlayerController>();
 
