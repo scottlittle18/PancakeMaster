@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
     // the time it takes for the game to reset in seconds
     [SerializeField]
-    private int RespawnTime = 2;
+    private int RespawnTime;
 
     // Use this for initialization
     void Start()
@@ -92,6 +92,9 @@ public class PlayerController : MonoBehaviour
 
     private void UpdatePhysicsMaterial()
     {
+        if (!grounded)
+            playerMovingPM.friction = 0;
+
         if (Mathf.Abs(moveInput) > 0)
         {
             playerGroundCollider.sharedMaterial = playerMovingPM;
