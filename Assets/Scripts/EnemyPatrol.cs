@@ -19,6 +19,8 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsWall;
 
+    Animator anim;
+
     //[SerializeField]
     private Rigidbody2D enemyRigidBody;
 
@@ -26,6 +28,7 @@ public class EnemyPatrol : MonoBehaviour
     void Start()
     {
         enemyRigidBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -43,13 +46,16 @@ public class EnemyPatrol : MonoBehaviour
 
         if (moveRight)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
             enemyRigidBody.velocity = new Vector2(moveSpeed, enemyRigidBody.velocity.y);
+            anim.SetFloat("PatrolSpeed", Mathf.Abs(enemyRigidBody.velocity.x));
+
         }
         else
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
             enemyRigidBody.velocity = new Vector2(-moveSpeed, enemyRigidBody.velocity.y);
+            anim.SetFloat("PatrolSpeed", Mathf.Abs(enemyRigidBody.velocity.x));
         }
     }
 

@@ -18692,37 +18692,41 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 68.75351
+      value: 64.34
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.448443
+      value: -6.66
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.02734375
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4940273707895950, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+    - target: {fileID: 4964483056514826, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160626731793754, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
+      propertyPath: m_Name
+      value: FrenchToastEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d06e42496e414a43bb0938bbe9622c7, type: 2}
@@ -19448,20 +19452,6 @@ Prefab:
     - target: {fileID: 4495634366679596, guid: 9df345850753414448b153b8392f5f6b, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376123963939128, guid: 9df345850753414448b153b8392f5f6b, type: 2}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 114722285552899092, guid: 9df345850753414448b153b8392f5f6b,
-        type: 2}
-      propertyPath: Dead
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114722285552899092, guid: 9df345850753414448b153b8392f5f6b,
-        type: 2}
-      propertyPath: maxSpeed
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9df345850753414448b153b8392f5f6b, type: 2}
