@@ -19458,6 +19458,11 @@ Prefab:
       propertyPath: Dead
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114722285552899092, guid: 9df345850753414448b153b8392f5f6b,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9df345850753414448b153b8392f5f6b, type: 2}
   m_IsPrefabParent: 0
