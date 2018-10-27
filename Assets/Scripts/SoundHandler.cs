@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class SoundHandler : MonoBehaviour {
 
-    static SoundHandler instance = null;
+    public static SoundHandler instance = null;
 
+    [SerializeField]
+    AudioClip[] gameFX = new AudioClip[1];
+
+    [SerializeField]
+    AudioClip buttonClick;
+
+    [SerializeField]
+    AudioSource gameSound;
 	// Use this for initialization
 	void Start () {
-		
+        gameSound = GetComponent<AudioSource>();
 	}
 
     void Awake()
@@ -28,4 +36,14 @@ public class SoundHandler : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public void PlayGameSound(int newClip)
+    {
+        gameSound.PlayOneShot(gameFX[newClip]);
+    }
+
+    public void PlayUISound()
+    {
+        gameSound.PlayOneShot(buttonClick);
+    }
 }

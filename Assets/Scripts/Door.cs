@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    
+
     BoxCollider2D box;
 
     int currentScene;
 
     private void Start()
     {
+        
         currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -27,8 +28,7 @@ public class Door : MonoBehaviour
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && other.tag == "Player")
         {
             Debug.Log("Up command registered.");
-            
-            //SceneManager.MoveGameObjectToScene( currentScene + 1);
+            SoundHandler.instance.PlayGameSound(0);          
             SceneManager.LoadScene(currentScene + 1);
         }
     }

@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &45728839 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114805471873269820, guid: 4b485286657fa934b81122952ccf2981,
+    type: 2}
+  m_PrefabInternal: {fileID: 484282132}
+  m_Script: {fileID: 11500000, guid: 825064f43312a4745abe7f82ebd5790f, type: 3}
 --- !u!1 &467454081
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +193,73 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &484282132
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974420694366070, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805471873269820, guid: 4b485286657fa934b81122952ccf2981,
+        type: 2}
+      propertyPath: buttonClick
+      value: 
+      objectReference: {fileID: 8300000, guid: e41705e8c7c81314d92a7e811443c314, type: 3}
+    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
+        type: 2}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
+        type: 2}
+      propertyPath: Pan2D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
+        type: 2}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b485286657fa934b81122952ccf2981, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1094807669
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +339,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1266773079}
         m_MethodName: Level1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 45728839}
+        m_MethodName: PlayUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -400,6 +484,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1266773079}
         m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 45728839}
+        m_MethodName: PlayUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -655,6 +750,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1266773079}
         m_MethodName: Credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 45728839}
+        m_MethodName: PlayUISound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
