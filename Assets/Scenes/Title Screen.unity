@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467454081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -216.86, y: -121.77, z: -0.1}
+  m_LocalPosition: {x: -249.02, y: -140.14, z: -0.1}
   m_LocalScale: {x: 2.859884, y: 2.1184332, z: 2.1184332}
   m_Children: []
   m_Father: {fileID: 1763969906}
@@ -222,7 +222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5906959, y: 0.36800003}
   m_AnchorMax: {x: 0.9906959, y: 0.4918033}
-  m_AnchoredPosition: {x: -2.0181007, y: 1.2799988}
+  m_AnchoredPosition: {x: -2.018097, y: 1.2799988}
   m_SizeDelta: {x: 2.1781, y: -0.45}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1094807671
@@ -274,7 +274,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1094807672
@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.586, y: 0.11000001}
   m_AnchorMax: {x: 0.9906959, y: 0.23900001}
-  m_AnchoredPosition: {x: 0.3199005, y: 0.20000458}
+  m_AnchoredPosition: {x: 0.31991577, y: 0.2000122}
   m_SizeDelta: {x: 0.6000004, y: 0.98950005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143446147
@@ -611,7 +611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5906959, y: 0.24719673}
   m_AnchorMax: {x: 0.9906959, y: 0.36800003}
-  m_AnchoredPosition: {x: -0.8030853, y: -0.29999924}
+  m_AnchoredPosition: {x: -0.8031006, y: -0.29999542}
   m_SizeDelta: {x: 2.4301, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336059231

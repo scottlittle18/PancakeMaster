@@ -27,7 +27,8 @@ public class Door : MonoBehaviour
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && other.tag == "Player")
         {
             Debug.Log("Up command registered.");
-
+            
+            //SceneManager.MoveGameObjectToScene( currentScene + 1);
             SceneManager.LoadScene(currentScene + 1);
         }
     }
