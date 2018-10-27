@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundHandler : MonoBehaviour {
 
@@ -11,6 +12,9 @@ public class SoundHandler : MonoBehaviour {
 
     [SerializeField]
     AudioClip buttonClick;
+
+    [SerializeField]
+    AudioClip mouseOverButton;
 
     [SerializeField]
     AudioSource gameSound;
@@ -36,6 +40,11 @@ public class SoundHandler : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public void MouseOverSound()
+    {
+        gameSound.PlayOneShot(mouseOverButton);
+    }
 
     public void PlayGameSound(int newClip)
     {

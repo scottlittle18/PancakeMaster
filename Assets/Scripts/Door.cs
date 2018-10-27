@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
     {
         box = GetComponent<BoxCollider2D>();
     }
-
+    
     void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("Collision detected.");
