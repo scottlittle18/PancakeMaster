@@ -9,6 +9,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float accelerationForce, maxSpeed, jumpHeight, groundCheckRadius;
 
+    AudioSource SoundFX;
+
+    [SerializeField]
+    AudioSource JumpingFX;
+
+    [SerializeField]
+    AudioClip[] jumpFX = new AudioClip[2];
+
     //Respawn Delay
     [SerializeField]
     private float respawnDelay;
@@ -59,7 +67,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        playerGroundCollider = GetComponent<CapsuleCollider2D>();        
+        playerGroundCollider = GetComponent<CapsuleCollider2D>();
+        SoundFX = GetComponent<AudioSource>();
     }
 
 
@@ -84,7 +93,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetMovementInput();
-
+        AudioHandler();
         //Send the player's speed to the animator to let it play the run animation
         anim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
     }
@@ -116,12 +125,14 @@ public class PlayerController : MonoBehaviour
         //Enables Jumping
         if (jumpInput && grounded)
         {
+            JumpingFX.PlayOneShot(jumpFX[0]);
             Jump();
         }
 
         // Enables Double jumping
         if (jumpInput && !grounded && !doubleJumped)
         {
+            JumpingFX.PlayOneShot(jumpFX[1]);
             DoubleJump();
         }
     }
@@ -143,20 +154,14 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
     }
 
-
     private void Jump()
     {
         myRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         anim.SetFloat("jumpVelocity", myRigidBody.velocity.y);
-            
+        
 
-        //Check for Second jump input to allow Double Jumping
-        if (jumpInput && !doubleJumped && !grounded)
-        {
-            DoubleJump();
-        }
+        
     }
-
 
     private void DoubleJump()
     {
@@ -177,7 +182,22 @@ public class PlayerController : MonoBehaviour
             newCurrentCheckpoint.SetAsActivated(true);
         }
     }
-    
+
+    public void AudioHandler()
+    {
+        if (myRigidBody.velocity.x > 0.1 && grounded)
+        {
+            SoundFX.UnPause();
+        }
+        else if (myRigidBody.velocity.x < -0.1 && grounded)
+        {
+            SoundFX.UnPause();
+        }
+        else if (myRigidBody.velocity.x == 0 || !grounded)
+        {
+            SoundFX.Pause();
+        }
+    }
 
     public void Respawn()
     {
@@ -198,8 +218,7 @@ public class PlayerController : MonoBehaviour
             myRigidBody.velocity = Vector2.zero;
             transform.position = currentCheckpoint.transform.position;
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(respawnDelay);
-            
+            yield return new WaitForSeconds(respawnDelay);           
 
         }
     }

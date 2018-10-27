@@ -33,7 +33,6 @@ public class Spike : MonoBehaviour
             checkRadius, whatIsPlayer);
         if (active)
         {
-            Debug.Log("Ready to move!");
             if (transform.position.y < endHeight) //checks to see if it's at the final height
             {
                 if (transform.position.y < goalHeight) //if current height is less than the goal height it moves up until it reaches it
@@ -55,7 +54,6 @@ public class Spike : MonoBehaviour
         {
             if (transform.position.y > originHeight) //sees if it's higher than origin
             {
-                Debug.Log("Resetting...");
                 this.GetComponent<BoxCollider2D>().enabled = false;
                 transform.Translate(Vector3.down * Time.deltaTime);
                 Reset();
