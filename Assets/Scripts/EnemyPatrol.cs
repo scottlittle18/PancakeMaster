@@ -21,6 +21,8 @@ public class EnemyPatrol : MonoBehaviour
 
     Animator anim;
 
+    AudioSource SoundFX;
+
     //[SerializeField]
     private Rigidbody2D enemyRigidBody;
 
@@ -67,5 +69,19 @@ public class EnemyPatrol : MonoBehaviour
 
     }
 
-
+    public void AudioHandler()
+    {
+        if (enemyRigidBody.velocity.x > 0.1)
+        {
+            SoundFX.UnPause();
+        }
+        else if (enemyRigidBody.velocity.x < -0.1)
+        {
+            SoundFX.UnPause();
+        }
+        else if (enemyRigidBody.velocity.x == 0)
+        {
+            SoundFX.Pause();
+        }
+    }
 }

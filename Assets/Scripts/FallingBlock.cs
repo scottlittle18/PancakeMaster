@@ -5,12 +5,18 @@ using UnityEngine;
 public class FallingBlock : MonoBehaviour
 {
     [SerializeField]
-    private int FallDelay = 3;
+    float FallDelay;
     [SerializeField]
-    private int FallSpeed = 5;
+    float FallSpeed;
+
+    AudioSource brickFall;
 
     private bool isFalling;
 
+    private void Start()
+    {
+        brickFall = GetComponent<AudioSource>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Player")
@@ -23,11 +29,12 @@ public class FallingBlock : MonoBehaviour
         yield return new WaitForSeconds(FallDelay);
         this.GetComponent<BoxCollider2D>().enabled = false;
         isFalling = true;
+        brickFall.Play();
     }
     private void Update()
     {
         if(isFalling)
-        {
+        {            
             transform.Translate(Vector3.down * Time.deltaTime * FallSpeed);
         }
     }

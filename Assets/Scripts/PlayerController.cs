@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     AudioSource SoundFX;
 
     [SerializeField]
-    AudioSource JumpingFX;
+    AudioSource JumpingFX, bouncingFX;
 
     [SerializeField]
-    AudioClip[] jumpFX = new AudioClip[2];
+    AudioClip[] jumpFX = new AudioClip[3];
 
     //Respawn Delay
     [SerializeField]
@@ -35,8 +35,10 @@ public class PlayerController : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private LayerMask whatIsGround;
+    [SerializeField]
+    private LayerMask whatIsBouncy;
 
-    private bool grounded, doubleJumped;
+    private bool grounded, doubleJumped, bouncing;
 
     [SerializeField]
     private PhysicsMaterial2D playerMovingPM, playerStoppingPM;
@@ -79,6 +81,8 @@ public class PlayerController : MonoBehaviour
         Move();
         grounded = Physics2D.OverlapCircle(groundCheck.position,
             groundCheckRadius, whatIsGround);
+        bouncing = Physics2D.OverlapCircle(groundCheck.position,
+            groundCheckRadius, whatIsBouncy);
 
         anim.SetFloat("jumpVelocity", myRigidBody.velocity.y);
 
@@ -183,6 +187,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //-------------AUDIO HANDLER----------------------
     public void AudioHandler()
     {
         if (myRigidBody.velocity.x > 0.1 && grounded)
@@ -197,7 +202,17 @@ public class PlayerController : MonoBehaviour
         {
             SoundFX.Pause();
         }
+
+
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == ("Jelly"))
+            bouncingFX.Play();
+    }
+
+
 
     public void Respawn()
     {

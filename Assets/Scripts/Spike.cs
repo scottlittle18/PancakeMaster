@@ -6,7 +6,7 @@ using UnityEngine;
 public class Spike : MonoBehaviour
 {
 
-    private bool active, isAttacking;
+    private bool active, wasActive, isAttacking;
     private float goalHeight, originHeight, endHeight;
 
     [SerializeField]
@@ -21,23 +21,35 @@ public class Spike : MonoBehaviour
     [SerializeField]
     private BoxCollider2D warningSpike;
 
+    [SerializeField]
+    private float extensionSpeed;
+
+    AudioSource spikeSound;
+
     private void Start()
     {
+        spikeSound = GetComponent<AudioSource>();
         originHeight = transform.position.y;
         Reset();
     }
     private void FixedUpdate()
     {
         //Sets the active variable
+        wasActive = active;
+
         active = Physics2D.OverlapCircle(playerCheck.position,
             checkRadius, whatIsPlayer);
+
+        if (active && !wasActive)
+            spikeSound.Play();
+
         if (active)
         {
             if (transform.position.y < endHeight) //checks to see if it's at the final height
             {
                 if (transform.position.y < goalHeight) //if current height is less than the goal height it moves up until it reaches it
                 {
-                    transform.Translate(Vector3.up * Time.deltaTime);
+                    transform.Translate(Vector3.up * Time.deltaTime * extensionSpeed);
                 }
                 else //once it reaches the ready height, sets a new goal height
                 {

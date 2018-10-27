@@ -117,7 +117,7 @@ NavMeshSettings:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114805471873269820, guid: 4b485286657fa934b81122952ccf2981,
     type: 2}
-  m_PrefabInternal: {fileID: 484282132}
+  m_PrefabInternal: {fileID: 896569168}
   m_Script: {fileID: 11500000, guid: 825064f43312a4745abe7f82ebd5790f, type: 3}
 --- !u!1 &467454081
 GameObject:
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &484282132
+--- !u!1001 &896569168
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -232,36 +232,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114805471873269820, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: buttonClick
-      value: 
-      objectReference: {fileID: 8300000, guid: e41705e8c7c81314d92a7e811443c314, type: 3}
-    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: BypassReverbZones
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: Pan2D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82682048262967100, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: BypassListenerEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805471873269820, guid: 4b485286657fa934b81122952ccf2981,
-        type: 2}
-      propertyPath: mouseOverButton
-      value: 
-      objectReference: {fileID: 8300000, guid: c9a6172d02f6abd41a42da3d3f599c40, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b485286657fa934b81122952ccf2981, type: 2}
   m_IsPrefabParent: 0
