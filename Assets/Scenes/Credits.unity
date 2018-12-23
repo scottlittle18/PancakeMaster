@@ -942,8 +942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "B.J Paner\r\nJared Bronstein\r\nMackenzie Bearse\r\nSam Hirsch\r\nZack
-    Wells\n"
+  m_Text: "B.J Paner\r\nJared Bronstein\r\nMackenzie Bearse\r\nSam Hirsch\r\n\n"
 --- !u!222 &1191948764
 CanvasRenderer:
   m_ObjectHideFlags: 0
